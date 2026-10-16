@@ -1,0 +1,79 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": []
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "64J0sN-wTTvw",
+        "outputId": "f04a4252-cb20-4085-ae92-371985a5e7e9"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "================================\n",
+            "     IT SUPPORT CHATBOT\n",
+            "================================\n",
+            "Ask me about password, email, or VPN.\n",
+            "Type 'exit' to stop the chatbot.\n",
+            "You: Outlook is not working\n",
+            "Bot: Check your internet connection and email access.\n",
+            "You: VPN is not connecting\n",
+            "Bot: Check your VPN connection and sign-in status.\n",
+            "You: Exit\n",
+            "Bot: Goodbye! Have a great day.\n"
+          ]
+        }
+      ],
+      "source": [
+        "\n",
+        "print(\"================================\")\n",
+        "print(\"     IT SUPPORT CHATBOT\")\n",
+        "print(\"================================\")\n",
+        "print(\"Ask me about password, email, or VPN.\")\n",
+        "print(\"Type 'exit' to stop the chatbot.\")\n",
+        "\n",
+        "while True:\n",
+        "    user_input = input(\"You: \").lower().strip()\n",
+        "\n",
+        "    if user_input in [\"hello\", \"hi\", \"hey\"]:\n",
+        "        print(\"Bot: Hello! How can I help you?\")\n",
+        "\n",
+        "    elif \"password\" in user_input:\n",
+        "        print(\"Bot: Please use your official password reset process.\")\n",
+        "\n",
+        "    elif \"email\" in user_input or \"outlook\" in user_input:\n",
+        "        print(\"Bot: Check your internet connection and email access.\")\n",
+        "\n",
+        "    elif \"vpn\" in user_input:\n",
+        "        print(\"Bot: Check your VPN connection and sign-in status.\")\n",
+        "\n",
+        "    elif user_input == \"exit\":\n",
+        "        print(\"Bot: Goodbye! Have a great day.\")\n",
+        "        break\n",
+        "\n",
+        "    else:\n",
+        "        print(\"Bot: Sorry, I don't understand yet.\")\n",
+        "        print(\"Bot: Please try password, email, or VPN.\")"
+      ]
+    }
+  ]
+}
